@@ -1,5 +1,5 @@
 from abc import ABC
 
-class Engine(ABC):
+class Tires(ABC):
     def needs_service(self) -> bool:
         pass
