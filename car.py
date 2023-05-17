@@ -1,10 +1,10 @@
-from abc import ABC, abstractmethod
+from ServiceableInterface import Serviceable
+from CarFactory import CarFactory
 
-
-class Car(ABC):
+class Car(Serviceable):
     def __init__(self, last_service_date):
         self.last_service_date = last_service_date
-
-    @abstractmethod
-    def needs_service(self):
-        pass
+        self.factory = CarFactory()
+    
+    def needs_service(self) -> bool:
+        return True
