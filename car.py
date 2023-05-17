@@ -1,10 +1,9 @@
 from ServiceableInterface import Serviceable
-from CarFactory import CarFactory
 
 class Car(Serviceable):
-    def __init__(self, last_service_date):
-        self.last_service_date = last_service_date
-        self.factory = CarFactory()
-    
-    def needs_service(self) -> bool:
-        return True
+    def __init__(self, engine, battery):
+        self.engine = engine
+        self.battery = battery
+
+    def needs_service(self):
+        return self.engine.needs_service() or self.battery.needs_service()
