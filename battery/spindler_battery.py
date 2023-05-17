@@ -1,6 +1,6 @@
 from abc import ABC
 
-from BatteryInterface import Battery
+from battery.BatteryInterface import Battery
 from datetime import date, timedelta
 
 

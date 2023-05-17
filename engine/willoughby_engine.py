@@ -1,6 +1,6 @@
 from abc import ABC
 
-from EngineInterface import Engine
+from engine.EngineInterface import Engine
 
 
 class WilloughbyEngine(Engine):
